@@ -20,6 +20,26 @@ of a population of genome structures.
 
 ### 2. Modules <a name = 'modules'></a>
 
+![modules](modules.png)
+
+clusty is comprised of 5 modules:
+
+### Module 1
+
+Generates in silico HiC matrix from a population of structures
+
+### Module 2
+
+Detects repeated structural patterns - clusters of beads - on the population scale
+
+### Module 3
+
+detects clusters in single number_of_structures
+
+### Module 4
+
+simple analysis of results from modules 1-3
+
 Modules 1-3 are both in form of Jupyter notebooks, whereas modules 1-3 are provided as python scripts.
 
 ### 3. Usage <a name = 'usage'></a>
@@ -78,7 +98,7 @@ Additional files that are required to run clusty modules are:
 
 ### 6. Warnings  <a name = 'warnings'></a>
 
-Currently when running module 1 user will get a DeprecationWarning - this can be ignored, as it has no effect on the analysus
+Currently when running module 1 user will get a DeprecationWarning - this can be ignored, as it has no effect on the analysis
 
 
 ### 7. Example of analysis  <a name = 'exampleofanalysis'></a>
