@@ -1,0 +1,12 @@
+home,/exchange/PROJECT
+number_of_structures,10000
+number_of_beads_per_structure,3043
+fraction,0.01
+cores,8
+r_factor,0.9
+dataset_name,HAP1_10000
+dataset_folder,/exchange/DATASETS/HAP1/10000
+a_type,fixed
+borders,borders3043.npy
+primes,primes3043.npy
+cutoff,0.12

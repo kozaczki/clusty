@@ -1,0 +1,9 @@
+home,/exchange/PROJECT
+number_of_structures,10000
+number_of_beads_per_structure,3043
+cores,8
+k_for_graph,5
+dataset_name,HAP1_10000G
+dataset_folder,/exchange/DATASETS/HAP1/10000G
+
+

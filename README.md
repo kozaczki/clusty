@@ -1,4 +1,3 @@
-# clusty
 
 ## Table of contents
 1. [Introduction](#introduction)
@@ -66,16 +65,19 @@ to run the script used needs to provide path to ARGS file as parameter #1
 A docker image containing all the code and enviroments can be pulled from docker hub (kozaczki/clusty)
 
 Once inside a docker container enviroments can be activates with:
-
+```
 . /venv/module1_3/bin/activate
-
+```
 or
-
+```
 . /venv/module2_4/bin/activate
+```
 
 to run the jupyter notebook:
 
+```
 jupyter-notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root
+```
 
 #### 3. Docker image on Google Cloud Platform (GCP)
 
@@ -85,9 +87,78 @@ docker.io/kozaczki/clusty:latest
 
 ### 4. ARGS  <a name = 'args'></a>
 
-In order to run automatically both jupyter notebooks and scripts need to be provided with path to ARGS file.
-Detailed description of args:
+sample files for HAP1 analysis can be found in samples folder in repo
 
+In order to run automatically both jupyter notebooks and scripts need to be provided with path to ARGS file.
+ARGS file is a csv file with following structure:
+
+* for module 1
+
+home,             - path to home folder
+
+number_of_structures,
+
+number_of_beads_per_structure,
+
+cores,            - number of cores available for computing
+
+k_for_graph,      - number of nearest neighbours for graph building
+
+dataset_name,     
+
+dataset_folder,   - path to dataset folder
+
+* for modules 2 (nearest neighbours) and 3
+
+home,/exchange/PROJECT
+
+number_of_structures,10000
+
+number_of_beads_per_structure,3043
+
+fraction,0.01
+
+cores,8
+
+neighbours,10
+
+dataset_name,HAP1_10000
+
+dataset_folder,/exchange/DATASETS/HAP1/10000
+
+a_type,neighbours
+
+borders,borders3043.npy
+
+primes,primes3043.npy
+
+clustering,0.12
+
+* for modules 2 (fixed radius) and 3
+
+home,/exchange/PROJECT
+
+number_of_structures,10000
+
+number_of_beads_per_structure,3043
+
+fraction,0.01
+
+cores,8
+
+r_factor,0.9
+
+dataset_name,HAP1_10000
+
+dataset_folder,/exchange/DATASETS/HAP1/10000
+
+a_type,fixed
+
+borders,borders3043.npy
+
+primes,primes3043.npy
+
+cutoff,0.12
 
 ### 5. Helper files  <a name = 'helperfiles'></a>
 
